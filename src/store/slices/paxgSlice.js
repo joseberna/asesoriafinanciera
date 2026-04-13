@@ -6,35 +6,6 @@ export const fetchPaxgAllocation = createAsyncThunk(
   'paxg/fetchAllocation',
   async (walletAddress, { rejectWithValue }) => {
     try {
-      // Llamada directa al API que expone Paxos para el lookup
-      // GROWTH HACKING TRICK para Presentaciones Inmaculadas:
-      // Cuando presentas tu portafolio, el "404 Not Found" que escupe nativamente el 
-      // navegador al no conseguir la data oficial, mancha la consola de rojo.
-      // Interceptamos la Wallet específica de tu gráfica de ejemplo para devolver  
-      // el flujo instantáneamente sin tocar la red HTTP y mantener limpia la consola F12.
-      if (walletAddress === "0x5e9B0520E72f5cD9Fcb6470b8C1aAa3c476A8887") {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            resolve({
-              address: walletAddress,
-              balance: '0.080222628796157231',
-              bar: {
-                ownedPortion: '0.080222628796157231 oz',
-                serialNumber: 'H046209',
-                brandCode: 'The Open Joint Stock Company The Gulidov Krasnoyarsk Non Ferrous Metals Plant OJSC Krastsvetmet Krasnoyarsk Russia',
-                grossWeight: '402.075 oz',
-                fineness: '0.9999',
-                fineWeight: '402.0348 oz'
-              },
-              metadata: {
-                date: new Date().toLocaleString('es-ES', { dateStyle: 'short', timeStyle: 'medium' }),
-                blockNumber: '24867723'
-              }
-            });
-          }, 800);
-        });
-      }
-
       // API Oficial Pública con Headers de CORS Permitidos (access-control-allow-origin: *)
       const response = await axios.get(`https://account.paxos.com/api/v1/paxg/allocations?address=${walletAddress}`);
 
