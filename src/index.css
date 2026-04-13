@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-crypto-bg: #0b0e14;
+  --color-crypto-surface: #151a23;
+  --color-crypto-surface-alt: #1a202c;
+  --color-btc-orange: #f7931a;
+  --color-sol-green: #14f195;
+  --color-eth-blue: #627eea;
+  --color-neon-accent: #00ffcc;
+}
+
+@layer base {
+  body {
+    @apply bg-crypto-bg text-gray-100 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+/* Custom Utilities for Aura/Flow */
+.aura-glow {
+  box-shadow: 0 0 40px rgba(0, 255, 204, 0.2), inset 0 0 20px rgba(0, 255, 204, 0.1);
+}
+
+.aura-bg {
+  background: radial-gradient(circle at 50% 50%, rgba(20, 241, 149, 0.05) 0%, rgba(11, 14, 20, 0) 50%);
+}
+
+.glass-panel {
+  @apply bg-crypto-surface/80 backdrop-blur-md border border-gray-800/50 rounded-2xl;
+}
+
+.glass-panel-hover {
+  @apply hover:border-neon-accent/50 transition-colors duration-300;
+}
