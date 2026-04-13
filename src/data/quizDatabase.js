@@ -200,3 +200,206 @@ export const module2QuizBank = [
     correctAnswer: 'b'
   }
 ];
+
+export const module3QuizBank = [
+  {
+    id: 1,
+    question: "En el contexto de Contratos Diferenciales (CFD) y Futuros, la liquidación ('Margin Call') ocurre matemáticamente cuando:",
+    options: [
+      { id: 'a', text: "El precio del activo subyacente cae por debajo del precio promedio de mercado establecido en Wall Street." },
+      { id: 'b', text: "El PnL (Pérdida/Ganancia) negativo de la operación consume íntegramente el margen inicial que aportaste como garantía para abrir el apalancamiento." },
+      { id: 'c', text: "El exchange descentralizado agota sus reservas líquidas de dólares para pagar el spread." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 2,
+    question: "El apalancamiento financiero cruzado (Cross Margin) presenta un riesgo asimétrico porque:",
+    options: [
+      { id: 'a', text: "Las ganancias se dividen equitativamente entre el prestamista y el trader." },
+      { id: 'b', text: "Un movimiento violento en un solo trade puede consumir el balance entero de tu cuenta de futuros entera y no solo el margen asignado a esa posición." },
+      { id: 'c', text: "Congela los retiros de la cuenta hasta que el contrato inteligente evalúe las tarifas de mantenimiento." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 3,
+    question: "Si utilizas un apalancamiento de 50x y la moneda baja un 2% en una operación Long (compra), ¿qué sucede con tu margen operativo?",
+    options: [
+      { id: 'a', text: "Sufres una pérdida temporal del 2%, manejable a largo plazo." },
+      { id: 'b', text: "Tu retorno se amplifica negativamente perdiendo un 100% de la inversión (Liquidación Instantánea), ya que tu margen solo soportaba un 2% de caída." },
+      { id: 'c', text: "El exchange emite una alerta pidiendo confirmación criptográfica para inyectar colateral estable." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 4,
+    question: "El índice de Fuerza Relativa (RSI) es un oscilador de momento que idealmente indica:",
+    options: [
+      { id: 'a', text: "La velocidad y magnitud de los cambios de precio recientes para evaluar condiciones de sobrecompra (>70) o sobreventa (<30)." },
+      { id: 'b', text: "El interés compuesto que un token genera si se hace staking a largo plazo." },
+      { id: 'c', text: "El volumen cruzado exacto de cuántas personas están usando CFDs en un rango de 24 horas." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 5,
+    question: "Las Medias Móviles (MACD o MA) generan señales de Trading efectivas principalmente cuando:",
+    options: [
+      { id: 'a', text: "El precio permanece estático y consolidado." },
+      { id: 'b', text: "Ocurren cruces (ej. la media corta cruza por encima de la media larga o 'Death Cross' / 'Golden Cross'), confirmando la tendencia naciente." },
+      { id: 'c', text: "Los reguladores anuncian políticas fiduciarias en Twitter." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 6,
+    question: "Bandas de Bollinger: Cuando la distancia entre la banda superior e inferior se estrecha agresivamente (Squeeze), el trader deduce que:",
+    options: [
+      { id: 'a', text: "Hay una drástica reducción en la volatilidad temporal, y mecánicamente precede a un rompimiento o movimiento explosivo del precio." },
+      { id: 'b', text: "El activo se ha vuelto inherentemente seguro para holdear a largo plazo." },
+      { id: 'c', text: "El suministro circulante se está quemando debido a contratos deflacionarios." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 7,
+    question: "El concepto de Dollar Cost Averaging (DCA) matemáticamente invalida la necesidad de:",
+    options: [
+      { id: 'a', text: "Utilizar billeteras frías, ya que la inversión está controlada por terceros." },
+      { id: 'b', text: "Intentar 'ganarle al mercado' acertando los mínimos absolutos y máximos ('Timing the market'), diluyendo la volatilidad y riesgo de punto de entrada único." },
+      { id: 'c', text: "Tener ingresos recurrentes para sostener la inversión a largo plazo." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 8,
+    question: "Un Inversor novato decide meter los ahorros de toda su vida (Lump Sum) en Bitcoin en una sola mañana. El precio cae 50% esa tarde. ¿Si hubiera usado DCA, qué habría pasado?",
+    options: [
+      { id: 'a', text: "El broker habría devuelto la liquidez bajo protocolos de protección civil." },
+      { id: 'b', text: "Al distribuir el capital fraccionadamente en meses, esa caída habría permitido absorber un precio promedio mucho más bajo (Buy the dip automático) minimizando la ansiedad." },
+      { id: 'c', text: "El DCA obliga la liquidación adelantada, resultando en pérdidas más pronunciadas por apalancamiento programado." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 9,
+    question: "¿Cuál es el propósito intrínseco del Ratio de Riesgo/Beneficio (Risk/Reward Ratio) en gestión estricta de capital?",
+    options: [
+      { id: 'a', text: "Garantizar matemáticamente la ausencia total de pérdidas en un mes fiscal." },
+      { id: 'b', text: "Impedir al trader ejecutar operaciones donde el beneficio proyectado sea menor al capital en riesgo, permitiendo la rentabilidad neta a largo plazo inclusive con una tasa de asertividad baja." },
+      { id: 'c', text: "Pagar tarifas de financiación (Funding Rates) más bajas en operaciones apalancadas eternas." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 10,
+    question: "En Trading Institucional, 'Gestión de Riesgo' (Position Sizing) determina que NUNCA debes arriesgar más del 1-2% de tu cuenta global por operación. Esto previene:",
+    options: [
+      { id: 'a', text: "El riesgo de Ruina Matemática (Drawdown terminal); posibilitando la supervivencia estadística antes de agotar la cuenta durante rachas predeciblemente negativas." },
+      { id: 'b', text: "Los ataques de Phishing hacia tu llave privada alojada en Metamask." },
+      { id: 'c', text: "El pago del impuesto hiper-inflacionario en transacciones internacionales fiduciarias." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 11,
+    question: "¿Cuál es la diferencia axiomática técnica entre Trading Spot y el uso de Derivados/CFDs?",
+    options: [
+      { id: 'a', text: "Spot no cobra tarifas blockchain; el CFD opera con contratos on-chain lentos." },
+      { id: 'b', text: "En Spot posees genuinamente e irrevocablemente el activo nativo (puede enviarse a Billeteras Frías). El CFD o futuro es sólo un acuerdo apostando a su dirección de precio, el activo nunca es real." },
+      { id: 'c', text: "En herramientas de futuros Spot siempre ganas dividendos si no operas con margen inferior al 5%." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 12,
+    question: "Una orden 'Stop Loss' dinámica bajo disciplina de Trading Cuantitativo previene matemáticamente:",
+    options: [
+      { id: 'a', text: "La cancelación temporal del broker que provee liquidez." },
+      { id: 'b', text: "Dejar colapsar una operación basada en esperanza psicológica, cortando rigurosamente el sangrado del portafolio en una invalidación clara del análisis." },
+      { id: 'c', text: "Aumentar automáticamente el apalancamiento mediante promedios ponderados en operaciones de pérdida progresiva." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 13,
+    question: "Un RSI cayendo velozmente por debajo de 20 (fase severa de sobreventa), tradicionalmente es diagnosticado en una gráfica técnica como:",
+    options: [
+      { id: 'a', text: "Una oportunidad macro de pánico del retail que podría predecir un desgaste de la fuerza vendedora, abriendo brechas teóricas para rebotes al alza." },
+      { id: 'b', text: "Conclusión irreversible de la vida del activo; obligando a ventas en pánico para evitar liquidación a cero." },
+      { id: 'c', text: "Un error de desconfiguración del indicador estocástico en tiempos de hiperinflación." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 14,
+    question: "¿Por qué un Apalancamiento X10 incrementa tanto la euforia como la ansiedad exponencialmente?",
+    options: [
+      { id: 'a', text: "Porque manipula el libro de órdenes institucional favoreciendo siempre tu orden contra el market maker." },
+      { id: 'b', text: "Controlas $1000 ficticios operando marginalmente $100 reales. Las ganancias/pérdidas ocurren a un multiplicador del 1000%, convirtiendo volatilidades intradía de criptomonedas en eventos masivos de liquidación letal." },
+      { id: 'c', text: "Disminuye el Spread general en todas las monedas locales generando una sensación nula del valor inflacionario interno." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 15,
+    question: "Una divergencia bajista macro (Bearish Divergence) observada cuando el Gráfico de Precios crea Máximos más altos, pero el RSI crea Máximos más bajos indica estructuralmente:",
+    options: [
+      { id: 'a', text: "La confirmación de la absorción institucional y rotación al sector tecnológico de inteligencia artificial." },
+      { id: 'b', text: "El momentum o 'gasolina' intrínseca de los compradores se está disipando dramáticamente tras el telón, prediciendo alta probabilidad de una reversión." },
+      { id: 'c', text: "Que las ballenas (Whales) perdieron las llaves frías y no existen carteras activas reportando oferta." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 16,
+    question: "Al implementar puro 'Dollar Cost Averaging' (DCA) ciegamente en protocolos con fundamentos paupérrimos, la trampa letal es:",
+    options: [
+      { id: 'a', text: "Promediar tu precio en un activo tóxico que matemáticamente tiende a cero (Shitcoins), resultando en pérdida total en dosis mensuales." },
+      { id: 'b', text: "El cobro abusivo de comisiones ocultas de compraventa de las DeFi." },
+      { id: 'c', text: "La revalorización brusca por algoritmos institucionales obligando al sistema a devolverte todo el Fiat." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 17,
+    question: "Si el precio de liquidación en un Contrato Futuro Long X25 es equivalente a un -4% de devaluación, ¿cuál es el peligro de la 'mecha caza-stops' (Wick)?",
+    options: [
+      { id: 'a', text: "Que una caída agresiva de 4% seguida en 3 segundos de una recuperación inmediata te exilie del mercado, perdiéndolo todo sin importar si tu predicción final se cumplió." },
+      { id: 'b', text: "Que el creador de mercado decida pagarte a destiempo bloqueando tu retiro hacia tu ledger (FRX-H)." },
+      { id: 'c', text: "Que suban los intereses compuestos de colateral y tu capital disminuya un 4% progresivamente durante 25 meses de staking institucional." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 18,
+    question: "¿Qué papel juega el 'Funding Rate' (Tasa de Financiación) en los Derivados Perpetuos del Ecosistema Crypto?",
+    options: [
+      { id: 'a', text: "Se cobra o se paga cada 8 horas para anclar mecánicamente el precio manipulado del contrato futuro al precio del mercado Spot orgánico." },
+      { id: 'b', text: "Es el interés compuesto fijo que los exchanges recompensan a usuarios retail estables en su plataforma." },
+      { id: 'c', text: "Es el impuesto gubernamental confiscatorio por uso de CFD transnacional reportado a bancos centrales locales." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 19,
+    question: "El Ratio o Progresión de Fibonacci (19%, 38%, 61.8%) se aplica metodológicamente en las gráficas en expansión/absorción para:",
+    options: [
+      { id: 'a', text: "Garantizar a futuro picos perfectos algorítmicos respaldados por leyes cuánticas inamovibles matemáticamente inviolables." },
+      { id: 'b', text: "Determinar teóricamente zonas profundas o superficiales de regresión humana masiva donde los soportes/resistencias previos confluyen." },
+      { id: 'c', text: "Métricas de cálculo asimétrico necesarias en cadenas POW complejas antes del proceso de validación o halving masivo a nivel local institucional en Europa Central." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 20,
+    question: "DCA (Promedio Acumulativo) vs Trading Algorítmico Activo. La diferencia psicológica esencial y probada en Wall-Street recae en que:",
+    options: [
+      { id: 'a', text: "El DCA es robótico, despoja emociones, elimina ansiedades bursátiles y gana la guerra probabilística a largo o mediado horizonte de tiempo en activos deflacionarios duros. El Trading desgasta mental e intrínsecamente si no existe resiliencia superior y estrategia blindada en papel." },
+      { id: 'b', text: "El DCA incrementa las emociones por falta de actividad bursátil, motivando el pánico de cierre (panic sell) constante sin importar parámetros técnicos del MACD. El Trading ofrece paz interior dada la frecuencia horaria masiva o infinita." },
+      { id: 'c', text: "El DCA demanda estar 24 horas encendido monitoreando mechas o spreads mundiales mediante IA programable asimétrica." }
+    ],
+    correctAnswer: 'a'
+  }
+];
