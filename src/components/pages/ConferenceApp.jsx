@@ -5,7 +5,7 @@ import { ModuleTab } from '../molecules/ModuleTab';
 import { SystemTrapModule } from '../organisms/SystemTrapModule';
 import { DigitalEcosystemModule } from '../organisms/DigitalEcosystemModule';
 import { StrategyRiskModule } from '../organisms/StrategyRiskModule';
-import { WorkshopModule } from '../organisms/WorkshopModule';
+import { PracticalWorkshopModule } from '../organisms/PracticalWorkshopModule';
 import { useLanguage } from '../../context/LanguageContext';
 import { 
   Building2, 
@@ -22,7 +22,7 @@ export const ConferenceApp = () => {
     { id: 'module-1', title: t('nav.mod1') || 'Módulo 1: La Trampa Fiat', icon: Building2, component: SystemTrapModule },
     { id: 'module-2', title: t('nav.mod2') || 'Módulo 2: Ecosistema Digital', icon: Wallet, component: DigitalEcosystemModule },
     { id: 'module-3', title: t('nav.mod3') || 'Módulo 3: Estrategia y Riesgo', icon: TrendingUp, component: StrategyRiskModule },
-    { id: 'module-4', title: t('nav.mod4') || 'Módulo 4: Workshop Práctico', icon: CheckSquare, component: WorkshopModule },
+    { id: 'module-4', title: t('nav.mod4') || 'Módulo 4: Workshop Práctico', icon: CheckSquare, component: PracticalWorkshopModule },
   ];
 
   const CurrentModuleData = TABS.find((t) => t.id === activeTabId);
