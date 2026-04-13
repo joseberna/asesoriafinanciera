@@ -54,7 +54,7 @@ export const AppLayout = ({ tabsConfig, activeTab, onTabChange, renderSidebar, c
             <div className="p-6 md:p-8 border-b border-gray-800/50 space-y-4 pt-12 md:pt-8 min-w-[320px]">
               <div className="flex items-center justify-between">
                 <h1 className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-neon-accent to-eth-blue">
-                  Soberanía Digital
+                  Soberanía Financiera
                 </h1>
               </div>
               <p className="text-sm text-gray-500">{t('nav.subtitle')}</p>
@@ -67,8 +67,8 @@ export const AppLayout = ({ tabsConfig, activeTab, onTabChange, renderSidebar, c
 
             <div className="hidden md:block p-8 border-t border-gray-800/50 mt-auto min-w-[320px]">
               <div className="text-xs text-gray-600 font-mono">
-                BLOCK: 843,219 <br/>
-                STATUS: SECURE 🔒
+                JOSE FERNANDO BERNA MOLANO <br/>
+                EDUCADOR BITCOIN
               </div>
             </div>
           </motion.nav>

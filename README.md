@@ -1,16 +1,42 @@
-# React + Vite
+# Asesoría Financiera - Conferencia Web3 & Soberanía Digital
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SPA (Single Page Application) desarrollada en React.js orientada a ser el material interactivo para una conferencia sobre finanzas descentralizadas.
 
-Currently, two official plugins are available:
+## Stack Tecnológico 💻
+- React.js (Hooks, Context API)
+- Vite (Empaquetador ultrarrápido)
+- Tailwind CSS v4 (Estilos atómicos y variables de tema)
+- Framer Motion (Animaciones interactivas nivel producción)
+- Recharts (Gráficos DCA)
+- Lucide React (Íconos vectoriales)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Ejecución Local y DevOps 🛠️
+```bash
+# Instalar dependencias
+npm install o pnpm install
 
-## React Compiler
+# Iniciar servidor de desarrollo
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Generar CLI para construir la app
+npm run build
+```
 
-## Expanding the ESLint configuration
+### 🚀 Despliegue en Producción (Vercel)
+Este proyecto está optimizado con las mejores prácticas CI/CD para ser desplegado instantáneamente en **Vercel**. 
+Cuenta con el archivo `vercel.json` autoconfigurado que garantiza:
+- **Clean URLs:** Eliminación de extensiones `.html` para mejor SEO.
+- **SPA Rewrites:** Mapeo de sub-rutas `/(.*)` nativo a `/index.html` sin crashear el Router al refrescar.
+- **Cache Invalidation:** Header Cache-Control agresivo (`immutable`) optimizando la carga de Assets de Vite al máximo y ahorrando ancho de banda.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Pasos Rápidos:**
+1. Sube tu código a un repositorio en GitHub.
+2. Ingresa a `vercel.com/new` y conecta el repositorio.
+3. El *Build Command* (`npm run build`) y *Output Directory* (`dist`) se detectan automáticamente.
+4. Despliega con 1 solo click.
+
+## Patrones Arquitectónicos 🏗️
+- **Atomic Design**: Componentes segregados por Átomos, Moléculas, Organismos y Plantillas para maximizar reusabilidad.
+- **i18n Nativo**: Sistema de internacionalización mediante Contexto y diccionarios independientes.
+- **Growth Hacking & UX**: Microinteracciones continuas, evaluaciones en tiempo real y componentes como *Tooltips* de alta retención.
+- **Responsive-first**: Modificaciones condicionales con flex-box CSS para adaptarse a smartphones, tablets y pantallas de proyección anchas (AppLayout hiperelástico).

@@ -33,5 +33,28 @@ export const es = {
     gold: "Monedas de Oro/Plata",
     fiat: "Papel Moneda (Fiat)",
     bitcoin: "Bitcoin (Soberanía Digital)"
+  },
+  paxg: {
+    title: "Gold Allocation Lookup",
+    subtitle: "Cada token de Pax Gold está respaldado por una onza de oro asignado. Utiliza esta herramienta para buscar el número de serie y la información sobre tu oro.",
+    placeholder: "0x...",
+    lookupBtn: "Buscar",
+    loading: "Buscando...",
+    reportTitle: "Reporte de Asignación PAXG",
+    reportStart: "La dirección Ethereum",
+    reportMid: "actualmente tiene un saldo total de",
+    reportEnd: "PAXG, lo cual equivale a",
+    reportOz: "oz de oro.",
+    owned: "Porción de Propiedad",
+    serial: "Número de Serie del Lingote",
+    brand: "Código de Marca",
+    gross: "Peso Bruto",
+    fineness: "Pureza",
+    fine: "Peso Fino",
+    note1: "* Todo el peso del oro está listado en onzas troy",
+    note2: "** El reporte de asignación es preciso al",
+    note3: "*** Número de bloque confirmado al:",
+    note4: "**** La asignación y el reporte asociado pueden retrasarse hasta dos semanas. Si eres un cliente nuevo, tu saldo mostrará 0.00 hasta que se complete la asignación y se publique el informe.",
+    disclaimer: "Esta herramienta de búsqueda es para PAXG mantenido en billeteras on-chain de Ethereum (no intercambios/billeteras de custodia)."
   }
 };

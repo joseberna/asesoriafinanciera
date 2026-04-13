@@ -21,7 +21,7 @@ export const ControlOfMoneyActivity = () => {
       <div className="flex items-center gap-2 justify-between">
         <Tooltip content={t('tooltips.control') || "Aprende sobre la centralización vs descentralización."}>
           <h3 className="text-xl font-bold text-gray-100 cursor-help">
-            Actividad 2: Modelos de Emisión
+            Modelos de Emisión
           </h3>
         </Tooltip>
         {!showAnswer ? (
