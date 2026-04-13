@@ -9,6 +9,7 @@ import { Tooltip } from '../atoms/Tooltip';
 import { Button } from '../atoms/Button';
 import { fetchPaxgAllocation, clearAllocationData } from '../../store/slices/paxgSlice';
 import { useLanguage } from '../../context/LanguageContext';
+import { module2QuizBank } from '../../data/quizDatabase';
 
 export const DigitalEcosystemModule = () => {
   const dispatch = useDispatch();
@@ -20,10 +21,19 @@ export const DigitalEcosystemModule = () => {
   const [wallet, setWallet] = useState('');
   const [localError, setLocalError] = useState('');
 
-  // Estado Actividad Evaluatoria
-  const [answers, setAnswers] = useState({ q1: null, q2: null, q3: null });
+  // ----------------------------------------------------
+  // Estado Actividad Evaluatoria (Dinámico / Randomizado)
+  // ----------------------------------------------------
+  const [currentQuestions, setCurrentQuestions] = useState([]);
+  const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(null);
   const [showAnswers, setShowAnswers] = useState(false);
+
+  // Inicializar Quiz con 5 preguntas aleatorias onMount
+  React.useEffect(() => {
+    const shuffled = [...module2QuizBank].sort(() => 0.5 - Math.random());
+    setCurrentQuestions(shuffled.slice(0, 5));
+  }, []);
 
   // Validación y Dispatch de Redux para PAXG Lookup
   const handleLookup = () => {
@@ -47,17 +57,23 @@ export const DigitalEcosystemModule = () => {
 
   const currentError = localError || reduxError;
 
-  // Evaluador
+  // Evaluador Dinámico
   const checkAnswers = () => {
-    let currentScore = 0;
-    if (answers.q1 === 'c') currentScore += 33.3;
-    if (answers.q2 === 'a') currentScore += 33.3;
-    if (answers.q3 === 'b') currentScore += 33.4;
-    setScore(Math.round(currentScore));
+    let correctCount = 0;
+    currentQuestions.forEach((q) => {
+      if (answers[q.id] === q.correctAnswer) {
+        correctCount += 1;
+      }
+    });
+    setScore(Math.round((correctCount / currentQuestions.length) * 100));
   };
 
   const forceAnswers = () => {
-    setAnswers({ q1: 'c', q2: 'a', q3: 'b' });
+    const correctAnswers = {};
+    currentQuestions.forEach((q) => {
+      correctAnswers[q.id] = q.correctAnswer;
+    });
+    setAnswers(correctAnswers);
     setScore(100);
     setShowAnswers(true);
   };
@@ -241,7 +257,7 @@ export const DigitalEcosystemModule = () => {
             
             <div className="flex gap-3 items-center">
                <Tooltip content="Muestra los resultados matemáticos de tu examen.">
-                 <Button variant="outline" size="sm" onClick={checkAnswers} disabled={!answers.q1 || !answers.q2 || !answers.q3}>
+                 <Button variant="outline" size="sm" onClick={checkAnswers} disabled={Object.keys(answers).length < 5}>
                    Calificar Examen
                  </Button>
                </Tooltip>
@@ -254,71 +270,26 @@ export const DigitalEcosystemModule = () => {
           </div>
 
           <div className="space-y-8">
-            <div className="space-y-4">
-               <h4 className="font-bold text-gray-200">1. ¿Cuál es el mayor peligro funcional de una CBDC?</h4>
-               <div className="space-y-2">
-                 {[
-                   { id: 'a', text: 'Que están respaldadas por oro al igual que PAXG.' },
-                   { id: 'b', text: 'Que ocupan mucho espacio en disco para el usuario.' },
-                   { id: 'c', text: 'Permiten censurar transacciones y programar expirabilidad en los fondos del ciudadano.' }
-                 ].map((opt) => (
-                   <div 
-                     key={`q1-${opt.id}`} 
-                     onClick={() => setAnswers({...answers, q1: opt.id})}
-                     className={`p-4 rounded-xl border cursor-pointer transition-colors ${
-                       answers.q1 === opt.id ? (showAnswers && opt.id==='c' ? 'bg-sol-green/20 border-sol-green' : 'bg-neon-accent/10 border-neon-accent') : 
-                       (showAnswers && opt.id==='c' ? 'bg-sol-green/20 border-sol-green' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500')
-                     }`}
-                   >
-                     {opt.text}
-                   </div>
-                 ))}
-               </div>
-            </div>
-
-            <div className="space-y-4">
-               <h4 className="font-bold text-gray-200">2. Si descubren tu Frase Semilla de 12 palabras, ¿qué pueden hacer?</h4>
-               <div className="space-y-2">
-                 {[
-                   { id: 'a', text: 'Importar la billetera desde cualquier lugar del planeta y vaciar todos los fondos instantáneamente.' },
-                   { id: 'b', text: 'Nada, porque necesitarán mi contraseña tradicional y correo o SMS.' },
-                   { id: 'c', text: 'Nada, porque el banco bloquea accesos en IP desconocidas.' }
-                 ].map((opt) => (
-                   <div 
-                     key={`q2-${opt.id}`} 
-                     onClick={() => setAnswers({...answers, q2: opt.id})}
-                     className={`p-4 rounded-xl border cursor-pointer transition-colors ${
-                       answers.q2 === opt.id ? (showAnswers && opt.id==='a' ? 'bg-sol-green/20 border-sol-green' : 'bg-neon-accent/10 border-neon-accent') : 
-                       (showAnswers && opt.id==='a' ? 'bg-sol-green/20 border-sol-green' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500')
-                     }`}
-                   >
-                     {opt.text}
-                   </div>
-                 ))}
-               </div>
-            </div>
-
-            <div className="space-y-4">
-               <h4 className="font-bold text-gray-200">3. ¿Cuál es el principal valor de PAXG frente al Oro Físico escondido en tu casa?</h4>
-               <div className="space-y-2">
-                 {[
-                   { id: 'a', text: 'Ninguna, es lo mismo pero más inseguro.' },
-                   { id: 'b', text: 'Permite enviarlo al otro lado del mundo en microsegundos (coste gas) con máxima liquidez y siendo auditable en blockchain.' },
-                   { id: 'c', text: 'Que en PAXG tú vas personalmente a Londres a sacarlo a diario.' }
-                 ].map((opt) => (
-                   <div 
-                     key={`q3-${opt.id}`} 
-                     onClick={() => setAnswers({...answers, q3: opt.id})}
-                     className={`p-4 rounded-xl border cursor-pointer transition-colors ${
-                       answers.q3 === opt.id ? (showAnswers && opt.id==='b' ? 'bg-sol-green/20 border-sol-green' : 'bg-neon-accent/10 border-neon-accent') : 
-                       (showAnswers && opt.id==='b' ? 'bg-sol-green/20 border-sol-green' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500')
-                     }`}
-                   >
-                     {opt.text}
-                   </div>
-                 ))}
-               </div>
-            </div>
+            {currentQuestions.map((q, index) => (
+              <div key={q.id} className="space-y-4">
+                 <h4 className="font-bold text-gray-200">{index + 1}. {q.question}</h4>
+                 <div className="space-y-2">
+                   {q.options.map((opt) => (
+                     <div 
+                       key={`${q.id}-${opt.id}`} 
+                       onClick={() => setAnswers({ ...answers, [q.id]: opt.id })}
+                       className={`p-4 rounded-xl border cursor-pointer transition-colors ${
+                         answers[q.id] === opt.id 
+                           ? (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/20 border-sol-green' : 'bg-neon-accent/10 border-neon-accent') 
+                           : (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/20 border-sol-green' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500')
+                       }`}
+                     >
+                       {opt.text}
+                     </div>
+                   ))}
+                 </div>
+              </div>
+            ))}
           </div>
 
           <AnimatePresence>
