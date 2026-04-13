@@ -154,5 +154,24 @@ export const en = {
     btnAction: "Go to Official Site",
     warningTitle: "GOLDEN RULE",
     warningDesc: "Never share your 12 words. Do not save them in screenshots or emails. Paper is your best friend here."
+  },
+  profile: {
+    title: "Profile & Certifications",
+    subtitle: "Commitment to excellence in decentralized financial education.",
+    academicTitle: "Academic Background",
+    academicDesc: "Specialist in Financial Markets, strategic consulting, and digital asset management with a focus on personal sovereignty.",
+    bitcoinTitle: "Bitcoin Expertise",
+    bitcoinDesc: "Certified educator and pioneer in the adoption of Bitcoin as a global monetary standard.",
+    certTitle: "Credentials & Diplomas",
+    certDesc: "Endorsed by leading institutions in Bitcoin technical training.",
+    viewPdf: "View",
+    download: "Download",
+    eduCert: "BTC Educators Training Certificate",
+    diplomaBtc: "International Bitcoin Diploma",
+    skillsTitle: "Core Competencies",
+    skill1: "DCA & Portfolio Advisory",
+    skill2: "Security & Self-Custody",
+    skill3: "Macro / On-chain Analysis",
+    skill4: "Tokenomics & DeFi"
   }
 };

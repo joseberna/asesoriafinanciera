@@ -4,6 +4,7 @@ export const es = {
     mod2: "Módulo 2: Ecosistema Digital",
     mod3: "Módulo 3: Estrategia y Riesgo",
     mod4: "Módulo 4: Workshop Práctico",
+    profile: "Perfil del Consultor",
     subtitle: "Conferencia Web3, Bitcoin y DCA"
   },
   tooltips: {
@@ -154,5 +155,24 @@ export const es = {
     btnAction: "Ir al Sitio Oficial",
     warningTitle: "REGLA DE ORO",
     warningDesc: "Nunca compartas tus 12 palabras. No las guardes en capturas de pantalla o correos. El papel es tu mejor amigo aquí."
+  },
+  profile: {
+    title: "Perfil y Certificaciones",
+    subtitle: "Compromiso con la excelencia en la educación financiera descentralizada.",
+    academicTitle: "Formación Académica",
+    academicDesc: "Especialista en Mercados Financieros, consultoría estratégica y gestión de activos digitales con enfoque en soberanía personal.",
+    bitcoinTitle: "Experiencia Bitcoin",
+    bitcoinDesc: "Educador certificado y pionero en la adopción de Bitcoin como estándar monetario global.",
+    certTitle: "Credenciales y Diplomas",
+    certDesc: "Respaldado por instituciones líderes en la formación técnica de Bitcoin.",
+    viewPdf: "Ver",
+    download: "Descargar",
+    eduCert: "Certificado Formación Educadores BTC",
+    diplomaBtc: "Diplomado Internacional Bitcoin",
+    skillsTitle: "Áreas de Dominio",
+    skill1: "Asesoría DCA & Carteras",
+    skill2: "Seguridad & Autocustodia",
+    skill3: "Análisis Macro / On-chain",
+    skill4: "Tokenomics & DeFi"
   }
 };

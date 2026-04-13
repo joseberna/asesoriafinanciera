@@ -154,5 +154,24 @@ export const pt = {
     btnAction: "Ir para o Site Oficial",
     warningTitle: "REGRA DE OURO",
     warningDesc: "Nunca compartilhe suas 12 palavras. Não as salve em capturas de tela ou e-mails. O papel é seu melhor amigo aqui."
+  },
+  profile: {
+    title: "Perfil e Certificações",
+    subtitle: "Compromisso com a excelência na educação financeira descentralizada.",
+    academicTitle: "Formação Acadêmica",
+    academicDesc: "Especialista em Mercados Financeiros, consultoria estratégica e gestão de ativos digitais com foco em soberania pessoal.",
+    bitcoinTitle: "Experiência Bitcoin",
+    bitcoinDesc: "Educador certificado e pioneiro na adoção do Bitcoin como padrão monetário global.",
+    certTitle: "Credenciais e Diplomas",
+    certDesc: "Endossado por instituições líderes na formação técnica do Bitcoin.",
+    viewPdf: "Ver ",
+    download: "Baixar",
+    eduCert: "Certificado Formação Educadores BTC",
+    diplomaBtc: "Diplomado Internacional Bitcoin",
+    skillsTitle: "Áreas de Domínio",
+    skill1: "Assessoria DCA & Carteiras",
+    skill2: "Segurança & Autocustódia",
+    skill3: "Análise Macro / On-chain",
+    skill4: "Tokenomics & DeFi"
   }
 };

@@ -6,12 +6,14 @@ import { SystemTrapModule } from '../organisms/SystemTrapModule';
 import { DigitalEcosystemModule } from '../organisms/DigitalEcosystemModule';
 import { StrategyRiskModule } from '../organisms/StrategyRiskModule';
 import { PracticalWorkshopModule } from '../organisms/PracticalWorkshopModule';
+import { PresenterProfileModule } from '../organisms/PresenterProfileModule';
 import { useLanguage } from '../../context/LanguageContext';
 import { 
   Building2, 
   Wallet, 
   TrendingUp, 
-  CheckSquare 
+  CheckSquare,
+  User
 } from 'lucide-react';
 
 export const ConferenceApp = () => {
@@ -23,6 +25,7 @@ export const ConferenceApp = () => {
     { id: 'module-2', title: t('nav.mod2') || 'Módulo 2: Ecosistema Digital', icon: Wallet, component: DigitalEcosystemModule },
     { id: 'module-3', title: t('nav.mod3') || 'Módulo 3: Estrategia y Riesgo', icon: TrendingUp, component: StrategyRiskModule },
     { id: 'module-4', title: t('nav.mod4') || 'Módulo 4: Workshop Práctico', icon: CheckSquare, component: PracticalWorkshopModule },
+    { id: 'profile', title: t('nav.profile') || 'Perfil del Consultor', icon: User, component: PresenterProfileModule },
   ];
 
   const CurrentModuleData = TABS.find((t) => t.id === activeTabId);
