@@ -4,6 +4,8 @@ export const en = {
     mod2: "Module 2: Digital Ecosystem",
     mod3: "Module 3: Strategy and Risk",
     mod4: "Module 4: Practical Workshop",
+    mod5: "Module 5: DeFi Ecosystem",
+    mod6: "Module 6: The Power of NFTs",
     subtitle: "Web3, Bitcoin and DCA Conference"
   },
   tooltips: {
@@ -173,5 +175,102 @@ export const en = {
     skill2: "Security & Self-Custody",
     skill3: "Macro / On-chain Analysis",
     skill4: "Tokenomics & DeFi"
+  },
+  mod5: {
+    title: "Module 5: DeFi Ecosystem (Decentralized Finance)",
+    subtitle: "Removing Intermediaries: Be your own bank with liquidity protocols.",
+    intro: "Decentralized Finance (DeFi) allows for the recreation of traditional financial services (loans, savings, exchanges) without central banks or censorship, using smart contracts on the blockchain.",
+    
+    // Staking
+    stakingTitle: "1. Proof of Stake (Staking)",
+    stakingDesc: "Put your assets to work to secure the network and receive rewards for it. It is the digital equivalent of dividends or bank interest, but without intermediaries.",
+    stakingBlockchains: "Leading Blockchains for Staking:",
+    stakingEth: "Ethereum (ETH): Security standard, ~3-4% APR.",
+    stakingSol: "Solana (SOL): High performance, ~7.2% APR.",
+    stakingAda: "Cardano (ADA): Liquid delegation, ~3.1% APR.",
+    stakingDot: "Polkadot (DOT): Shared security, ~14.5% APR.",
+    stakingSimTitle: "Staking Rewards Simulator",
+    stakingLabel: "Amount to Delegate (USD)",
+    stakingSelect: "Select Blockchain",
+
+    // Loans & Collateral
+    loansTitle: "2. Loans and Collaterals (Lending)",
+    loansDesc: "In DeFi, you can borrow money (Stablecoins) without going through a credit office. You only need to provide a guarantee (Collateral).",
+    collateralTitle: "What is Collateral?",
+    collateralDesc: "It is an asset you leave 'locked' as a guarantee that you will pay your debt. If the value of your collateral falls too far, the protocol automatically sells it (liquidation) to cover the debt.",
+    ltvTitle: "LTV (Loan to Value)",
+    ltvDesc: "The maximum percentage you can borrow based on your guarantee. A 70% LTV means that for every $1,000 in BTC, you can borrow $700.",
+
+    // Earns & Yield
+    earnsTitle: "3. Yield Farming and Vaults (Earns)",
+    earnsDesc: "Maximize your returns by depositing liquidity into protocols. You can earn commissions for every trade others make.",
+    lpTitle: "Liquidity Pools (LP)",
+    lpDesc: "You deposit token pairs (e.g., ETH/USDC) to facilitate trading on DEXs like Uniswap or Jupiter. You receive a share of the transaction fees.",
+    warningsTitle: "DeFi Risks",
+    warningSmartContract: "Contract Risk: Code bugs that can be exploited by hackers.",
+    warningIL: "Impermanent Loss: Potential loss when providing liquidity in volatile markets.",
+
+    // Growth Hacking / SEO
+    ctaTitle: "Explore Leading Protocols",
+    ctaAave: "Aave: The largest lending protocol.",
+    ctaLido: "Lido: Liquid staking for Ethereum.",
+    ctaJupiter: "Jupiter: The #1 liquidity aggregator on Solana.",
+
+    // New labels and messages
+    tag: "Web3 Banking Revolution",
+    apyEstimated: "APY Estimated",
+    annualGain: "Annual Gain",
+    monthlyAvg: "Monthly Average",
+    stakingDisclaimer: "* Yields vary based on network congestion and protocol.",
+    collateralLabel: "Deposited Collateral (BTC/PAXG Value)",
+    leverageLabel: "Leverage (LTV)",
+    loanAvailable: "Available Loan (Stablecoins)",
+    liqRisk: "Liquidation Risk",
+    liqHigh: "HIGH",
+    liqMedium: "MEDIUM",
+    liqSafe: "SAFE",
+    safetyLimit: "Safety Limit",
+    dangerMsg: "Danger: You are very close to the liquidation threshold. A small drop in the collateral price will wipe out your capital.",
+    yieldFarming: "Yield Farming",
+    tradingFees: "Trading Fees",
+    ctaDesc: "Don't just learn the theory. Interact with the protocols that are defining the future of decentralized money.",
+    launchApp: "Launch App",
+    footer: "DeFi Module v1.0 • Built for Financial Sovereignty • Solana & Ethereum Ecosystems"
+  },
+  mod6: {
+    title: "Module 6: NFTs and Digital Ownership",
+    subtitle: "Beyond art: Asset tokenization and real-world utility.",
+    intro: "NFTs (Non-Fungible Tokens) are digital certificates of authenticity and uniqueness, protected by the blockchain. They allow proving ownership of unique assets, both digital and physical.",
+    
+    // Use Cases
+    useCaseTitle: "1. Real World Use Cases & Utility",
+    useCaseDesc: "An NFT is not just an image; it is a smart contract with programmable rules.",
+    utility1: "Art & Collectibles: Direct ownership between artist and collector.",
+    utility2: "Real Estate (RWA): Property tokenization for fractional investment.",
+    utility3: "Memberships & Tickets: Exclusive access to communities or events without fraudulent resales.",
+    utility4: "Intellectual Property: Automatic royalties for creators on every resale.",
+
+    // Real Examples
+    exampleTitle: "2. Examples Changing the Industry",
+    exampleEns: "ENS (Ethereum Name Service): .eth domains that act as your Web3 identity.",
+    exampleRealEstate: "Real Estate Tokenization: Platforms where you buy a fraction of a house and receive rent.",
+    exampleLoyalty: "Loyalty Programs: Big brands using NFTs to engage customers with real benefits.",
+
+    // Interactive Simulator
+    simTitle: "RWA Tokenization Simulator",
+    simDesc: "Convert a physical asset into a fractional digital asset on the blockchain.",
+    assetLabel: "Select Physical Asset",
+    assetHouse: "Luxury House",
+    assetArt: "Work of Art",
+    assetGold: "Gold Bar",
+    metadataTitle: "Generated Metadata",
+    fractionLabel: "Fractions to Create",
+    mintBtn: "Mint NFT (Simulate)",
+    mintSuccess: "NFT Successfully Minted!",
+    
+    // SEO / Growth
+    ctaTitle: "Discover the Future of Ownership",
+    ctaDesc: "Tokenization of Real World Assets (RWA) is the next big financial wave.",
+    footer: "NFT Module v1.0 • Powering the Sovereign Digital Economy"
   }
 };

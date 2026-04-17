@@ -13,18 +13,31 @@ import {
   Wallet, 
   TrendingUp, 
   CheckSquare,
-  User
+  User,
+  Zap,
+  Diamond
 } from 'lucide-react';
+import { DefiModule } from '../organisms/DefiModule';
+import { NftModule } from '../organisms/NftModule';
 
 export const ConferenceApp = () => {
   const [activeTabId, setActiveTabId] = useState('module-1');
   const { t } = useLanguage();
+  
+  React.useEffect(() => {
+    const activeTab = TABS.find(tab => tab.id === activeTabId);
+    if (activeTab) {
+      document.title = `${activeTab.title} | Soberanía Financiera`;
+    }
+  }, [activeTabId, t]);
 
   const TABS = [
     { id: 'module-1', title: t('nav.mod1') || 'Módulo 1: La Trampa Fiat', icon: Building2, component: SystemTrapModule },
     { id: 'module-2', title: t('nav.mod2') || 'Módulo 2: Ecosistema Digital', icon: Wallet, component: DigitalEcosystemModule },
     { id: 'module-3', title: t('nav.mod3') || 'Módulo 3: Estrategia y Riesgo', icon: TrendingUp, component: StrategyRiskModule },
     { id: 'module-4', title: t('nav.mod4') || 'Módulo 4: Workshop Práctico', icon: CheckSquare, component: PracticalWorkshopModule },
+    { id: 'module-5', title: t('nav.mod5') || 'Módulo 5: Ecosistema DeFi', icon: Zap, component: DefiModule },
+    { id: 'module-6', title: t('nav.mod6') || 'Módulo 6: El Poder de los NFTs', icon: Diamond, component: NftModule },
     { id: 'profile', title: t('nav.profile') || 'Perfil del Consultor', icon: User, component: PresenterProfileModule },
   ];
 

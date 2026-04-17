@@ -4,6 +4,8 @@ export const es = {
     mod2: "Módulo 2: Ecosistema Digital",
     mod3: "Módulo 3: Estrategia y Riesgo",
     mod4: "Módulo 4: Workshop Práctico",
+    mod5: "Módulo 5: Ecosistema DeFi",
+    mod6: "Módulo 6: El Poder de los NFTs",
     profile: "Perfil del Consultor",
     subtitle: "Conferencia Web3, Bitcoin y DCA"
   },
@@ -174,5 +176,102 @@ export const es = {
     skill2: "Seguridad & Autocustodia",
     skill3: "Análisis Macro / On-chain",
     skill4: "Tokenomics & DeFi"
+  },
+  mod5: {
+    title: "Módulo 5: Ecosistema DeFi (Finanzas Descentralizadas)",
+    subtitle: "Eliminando intermediarios: Sé tu propio banco con protocolos de liquidez.",
+    intro: "Las Finanzas Descentralizadas (DeFi) permiten recrear servicios financieros tradicionales (préstamos, ahorros, intercambios) sin bancos centrales ni censura, utilizando contratos inteligentes en la blockchain.",
+    
+    // Staking
+    stakingTitle: "1. Proof of Stake (Staking)",
+    stakingDesc: "Pon tus activos a trabajar para asegurar la red y recibe recompensas por ello. Es el equivalente digital a los dividendos o intereses bancarios, pero sin intermediarios.",
+    stakingBlockchains: "Blockchains Líderes para Staking:",
+    stakingEth: "Ethereum (ETH): El estándar de seguridad, ~3-4% APR.",
+    stakingSol: "Solana (SOL): Alta velocidad, ~7% APR.",
+    stakingAda: "Cardano (ADA): Delegación líquida, ~3% APR.",
+    stakingDot: "Polkadot (DOT): Seguridad compartida, ~14% APR (Nominal).",
+    stakingSimTitle: "Simulador de Recompensas por Staking",
+    stakingLabel: "Cantidad a Delegar (USD)",
+    stakingSelect: "Selecciona Blockchain",
+
+    // Loans & Collateral
+    loansTitle: "2. Préstamos y Colaterales (Lending)",
+    loansDesc: "En DeFi, puedes pedir prestado dinero (Stablecoins) sin pasar por una oficina de crédito. Solo necesitas dejar una garantía (Colateral).",
+    collateralTitle: "¿Qué es el Colateral?",
+    collateralDesc: "Es un activo que dejas 'bloqueado' como garantía de que pagarás tu deuda. Si el valor de tu colateral cae demasiado, el protocolo lo vende automáticamente (liquidación) para cubrir la deuda.",
+    ltvTitle: "LTV (Loan to Value)",
+    ltvDesc: "Es el porcentaje máximo que puedes pedir prestado basado en tu garantía. Un LTV del 70% significa que por cada $1,000 en BTC, puedes pedir $700.",
+
+    // Earns & Yield
+    earnsTitle: "3. Yield Farming y Bóvedas (Earns)",
+    earnsDesc: "Maximiza tus rendimientos depositando liquidez en protocolos. Puedes ganar comisiones por cada intercambio que otros usuarios hagan.",
+    lpTitle: "Liquidity Pools (LP)",
+    lpDesc: "Depositas pares de tokens (ej: ETH/USDC) para facilitar el trading en DEXs como Uniswap o Jupiter. Recibes una parte de los fees de transacción.",
+    warningsTitle: "Riesgos en DeFi",
+    warningSmartContract: "Riesgo de Contrato: Errores en el código que pueden ser hackeados.",
+    warningIL: "Impermanent Loss: Pérdida potencial al proveer liquidez en mercados volátiles.",
+
+    // Growth Hacking / SEO
+    ctaTitle: "Explora Protocolos Líderes",
+    ctaAave: "Aave: El protocolo de préstamos más grande.",
+    ctaLido: "Lido: Staking líquido para Ethereum.",
+    ctaJupiter: "Jupiter: El agregador de liquidez #1 en Solana.",
+
+    // New labels and messages
+    tag: "Revolución Bancaria Web3",
+    apyEstimated: "APY Estimado",
+    annualGain: "Ganancia Anual",
+    monthlyAvg: "Promedio Mensual",
+    stakingDisclaimer: "* Los rendimientos varían según la congestión de la red y el protocolo.",
+    collateralLabel: "Garantía Depositada (BTC/PAXG Value)",
+    leverageLabel: "Apalancamiento (LTV)",
+    loanAvailable: "Préstamo Disponible (Stablecoins)",
+    liqRisk: "Riesgo de Liquidación",
+    liqHigh: "ALTO",
+    liqMedium: "MEDIO",
+    liqSafe: "SEGURO",
+    safetyLimit: "Límite de Seguridad",
+    dangerMsg: "Peligro: Estás muy cerca del umbral de liquidación. Una pequeña caída en el precio del colateral borrará tu capital.",
+    yieldFarming: "Yield Farming",
+    tradingFees: "Comisiones de Trading",
+    ctaDesc: "No solo aprendas la teoría. Interactúa con los protocolos que están definiendo el futuro del dinero descentralizado.",
+    launchApp: "Lanzar App",
+    footer: "Módulo DeFi v1.0 • Construido para la Soberanía Financiera • Ecosistemas Solana y Ethereum"
+  },
+  mod6: {
+    title: "Módulo 6: NFTs y la Propiedad Digital",
+    subtitle: "Más allá del arte: Tokenización de activos y utilidad en el mundo real.",
+    intro: "Los NFTs (Tokens No Fungibles) son certificados digitales de autenticidad e irrepetibilidad, protegidos por la blockchain. Permiten demostrar propiedad sobre activos únicos tanto digitales como físicos.",
+    
+    // Use Cases
+    useCaseTitle: "1. Casos de Uso y Utilidad Reales",
+    useCaseDesc: "Un NFT no es solo una imagen; es un contrato inteligente con reglas programables.",
+    utility1: "Arte y Coleccionables: Propiedad directa entre artista y coleccionista.",
+    utility2: "Bienes Raíces (RWA): Tokenización de propiedades para inversión fraccionada.",
+    utility3: "Membresías y Tickets: Acceso exclusivo a comunidades o eventos sin reventas fraudulentas.",
+    utility4: "Propiedad Intelectual: Regalías automáticas para creadores en cada reventa.",
+
+    // Real Examples
+    exampleTitle: "2. Ejemplos que están Cambiando la Industria",
+    exampleEns: "ENS (Ethereum Name Service): Dominios .eth que actúan como tu identidad Web3.",
+    exampleRealEstate: "Real Estate Tokenization: Plataformas donde compras una fracción de una casa y recibes renta.",
+    exampleLoyalty: "Programas de Lealtad: Grandes marcas usando NFTs para fidelizar clientes con beneficios reales.",
+
+    // Interactive Simulator
+    simTitle: "Simulador de Tokenización RWA",
+    simDesc: "Convierte un activo físico en un activo digital fraccionado en la blockchain.",
+    assetLabel: "Selecciona Activo Físico",
+    assetHouse: "Casa de Lujo",
+    assetArt: "Obra de Arte",
+    assetGold: "Lingote de Oro",
+    metadataTitle: "Metadatos Generados",
+    fractionLabel: "Fracciones a Crear",
+    mintBtn: "Mint NFT (Simular)",
+    mintSuccess: "¡NFT Minteado con Éxito!",
+    
+    // SEO / Growth
+    ctaTitle: "Descubre el Futuro de la Propiedad",
+    ctaDesc: "La tokenización de activos del mundo real (RWA) es la próxima gran ola financiera.",
+    footer: "Módulo NFTs v1.0 • Impulsando la Economía Digital Soberana"
   }
 };
