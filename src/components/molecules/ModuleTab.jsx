@@ -5,7 +5,7 @@ export const ModuleTab = ({ title, isActive, onClick, icon: Icon }) => {
   return (
     <button
       onClick={onClick}
-      className={`relative flex items-center gap-3 px-6 py-4 w-full text-left transition-colors duration-300 ${
+      className={`relative flex items-center gap-3 px-6 py-4 w-full text-left transition-colors duration-300 cursor-pointer ${
         isActive ? 'text-white' : 'text-gray-500 hover:text-gray-300'
       }`}
     >

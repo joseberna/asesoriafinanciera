@@ -10,6 +10,9 @@ import { Button } from '../atoms/Button';
 import { fetchPaxgAllocation, clearAllocationData } from '../../store/slices/paxgSlice';
 import { useLanguage } from '../../context/LanguageContext';
 import { module2QuizBank } from '../../data/quizDatabase';
+import { BitcoinHalvingSection } from './BitcoinHalvingSection';
+import { BitcoinCyclesSection } from './BitcoinCyclesSection';
+import { InteractiveQuiz } from './InteractiveQuiz';
 
 export const DigitalEcosystemModule = () => {
   const dispatch = useDispatch();
@@ -20,20 +23,6 @@ export const DigitalEcosystemModule = () => {
   
   const [wallet, setWallet] = useState('');
   const [localError, setLocalError] = useState('');
-
-  // ----------------------------------------------------
-  // Estado Actividad Evaluatoria (Dinámico / Randomizado)
-  // ----------------------------------------------------
-  const [currentQuestions, setCurrentQuestions] = useState([]);
-  const [answers, setAnswers] = useState({});
-  const [score, setScore] = useState(null);
-  const [showAnswers, setShowAnswers] = useState(false);
-
-  // Inicializar Quiz con 5 preguntas aleatorias onMount
-  React.useEffect(() => {
-    const shuffled = [...module2QuizBank].sort(() => 0.5 - Math.random());
-    setCurrentQuestions(shuffled.slice(0, 5));
-  }, []);
 
   // Validación y Dispatch de Redux para PAXG Lookup
   const handleLookup = () => {
@@ -56,27 +45,6 @@ export const DigitalEcosystemModule = () => {
   };
 
   const currentError = localError || reduxError;
-
-  // Evaluador Dinámico
-  const checkAnswers = () => {
-    let correctCount = 0;
-    currentQuestions.forEach((q) => {
-      if (answers[q.id] === q.correctAnswer) {
-        correctCount += 1;
-      }
-    });
-    setScore(Math.round((correctCount / currentQuestions.length) * 100));
-  };
-
-  const forceAnswers = () => {
-    const correctAnswers = {};
-    currentQuestions.forEach((q) => {
-      correctAnswers[q.id] = q.correctAnswer;
-    });
-    setAnswers(correctAnswers);
-    setScore(100);
-    setShowAnswers(true);
-  };
 
   return (
     <motion.div 
@@ -134,9 +102,20 @@ export const DigitalEcosystemModule = () => {
             </div>
           </Card>
          </Tooltip>
+
+         {/* -------------------------------------------------------------------------------- */}
+         {/* SECCIÓN HALVING BITCOIN (NUEVA) */}
+         {/* -------------------------------------------------------------------------------- */}
+         <BitcoinHalvingSection />
+
+         {/* -------------------------------------------------------------------------------- */}
+         {/* SECCIÓN CICLOS DE BITCOIN (NUEVA) */}
+         {/* -------------------------------------------------------------------------------- */}
+         <BitcoinCyclesSection />
       </section>
 
-      {/* -----------------------------------------------------------------        {/* INTEGRACIÓN REDUX TÉCNICA: PAXG API LOOKUP REPLICA EXACTA */}
+      {/* -------------------------------------------------------------------------------- */}
+      {/* INTEGRACIÓN REDUX TÉCNICA: PAXG API LOOKUP REPLICA EXACTA */}
       {/* -------------------------------------------------------------------------------- */}
       <section className="space-y-8">
         <Tooltip content="Verificación de Activos de Oro consumiendo API Paxos por Redux.">
@@ -241,83 +220,17 @@ export const DigitalEcosystemModule = () => {
         </Tooltip>
       </section>
 
-      {/* -------------------------------------------------------------------------------- */}
-      {/* SECCIÓN DE EVALUACIÓN INTERACTIVA */}
-      {/* -------------------------------------------------------------------------------- */}
       <div className="flex items-center gap-4 my-8">
         <div className="h-px bg-gray-800 flex-1"></div>
-        <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">Certificación de Custodia</span>
+        <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">Certificación de Conocimientos Mod. 2</span>
         <div className="h-px bg-gray-800 flex-1"></div>
       </div>
 
-      <section>
-        <Card className={`transition-all duration-700 ${score === 100 ? 'border-sol-green shadow-[0_0_30px_rgba(20,241,149,0.15)] bg-sol-green/5' : score !== null ? 'border-red-500 bg-red-500/5' : 'border-gray-800'}`}>
-          <div className="flex items-center justify-between mb-8 border-b border-gray-800 pb-4">
-            <h3 className="text-xl font-bold text-white">Quiz: Autocustodia y Activos</h3>
-            
-            <div className="flex gap-3 items-center">
-               <Tooltip content="Muestra los resultados matemáticos de tu examen.">
-                 <Button variant="outline" size="sm" onClick={checkAnswers} disabled={Object.keys(answers).length < 5}>
-                   Calificar Examen
-                 </Button>
-               </Tooltip>
-               <Tooltip content="Desbloquea las respuestas correctas.">
-                 <Button variant="ghost" size="sm" onClick={forceAnswers} className="text-gray-400">
-                   <Eye size={18} className="mr-2"/> Ver Respuestas
-                 </Button>
-               </Tooltip>
-            </div>
-          </div>
-
-          <div className="space-y-8">
-            {currentQuestions.map((q, index) => (
-              <div key={q.id} className="space-y-4">
-                 <h4 className="font-bold text-gray-200">{index + 1}. {q.question}</h4>
-                 <div className="space-y-2">
-                   {q.options.map((opt) => (
-                     <div 
-                       key={`${q.id}-${opt.id}`} 
-                       onClick={() => setAnswers({ ...answers, [q.id]: opt.id })}
-                       className={`p-4 rounded-xl border cursor-pointer transition-colors ${
-                         answers[q.id] === opt.id 
-                           ? (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/20 border-sol-green' : 'bg-neon-accent/10 border-neon-accent') 
-                           : (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/20 border-sol-green' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500')
-                       }`}
-                     >
-                       {opt.text}
-                     </div>
-                   ))}
-                 </div>
-              </div>
-            ))}
-          </div>
-
-          <AnimatePresence>
-            {score !== null && (
-               <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} className="mt-8 border-t border-gray-800 pt-6">
-                 {score >= 60 ? (
-                   <div className="flex items-center gap-4 bg-sol-green/10 border border-sol-green/30 p-6 rounded-xl">
-                     <Award className="text-sol-green" size={48} />
-                     <div>
-                       <h4 className="text-2xl font-bold text-sol-green">Score: {score}% - Aprobado</h4>
-                       <p className="text-green-200 text-sm mt-1">Estás listo para empoderarte tecnológicamente. Tu riqueza te pertenece a ti y a nadie más.</p>
-                     </div>
-                   </div>
-                 ) : (
-                   <div className="flex items-center gap-4 bg-red-900/20 border border-red-500/30 p-6 rounded-xl">
-                     <AlertTriangle className="text-red-500" size={48} />
-                     <div>
-                       <h4 className="text-2xl font-bold text-red-500">Score: {score}% - Falta Conocimiento</h4>
-                       <p className="text-red-200 text-sm mt-1">Si operas Web3 ahora mismo estás en peligro máximo de pérdida de fondos. Repasa la teoría de soberanía. Dale a "Ver Respuestas".</p>
-                     </div>
-                   </div>
-                 )}
-               </motion.div>
-            )}
-          </AnimatePresence>
-        </Card>
-      </section>
-
+      <InteractiveQuiz 
+        questionBank={module2QuizBank} 
+        title="Quiz: Halving, Ciclos y Soberanía Digital"
+        icon={Award}
+      />
     </motion.div>
   );
 };

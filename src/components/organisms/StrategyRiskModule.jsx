@@ -7,6 +7,7 @@ import { Button } from '../atoms/Button';
 import { BookOpen, AlertTriangle, TrendingUp, Activity, BarChart2, Crosshair, Award, Eye, ExternalLink } from 'lucide-react';
 import { module3QuizBank } from '../../data/quizDatabase';
 import { useLanguage } from '../../context/LanguageContext';
+import { InteractiveQuiz } from './InteractiveQuiz';
 
 const simulatedPrices = [
   50000, 48000, 42000, 38000, 45000, 52000, 60000, 65000, 58000, 51000, 49000, 55000,
@@ -26,36 +27,6 @@ export const StrategyRiskModule = () => {
   const [priceMove, setPriceMove] = useState(5);
   const entryPrice = 50000;
 
-  // Quiz State
-  const [currentQuestions, setCurrentQuestions] = useState([]);
-  const [answers, setAnswers] = useState({});
-  const [score, setScore] = useState(null);
-  const [showAnswers, setShowAnswers] = useState(false);
-
-  useEffect(() => {
-    const shuffled = [...module3QuizBank].sort(() => 0.5 - Math.random());
-    setCurrentQuestions(shuffled.slice(0, 5));
-  }, []);
-
-  // Evaluador Dinámico
-  const checkAnswers = () => {
-    let correctCount = 0;
-    currentQuestions.forEach((q) => {
-      if (answers[q.id] === q.correctAnswer) correctCount += 1;
-    });
-    setScore(Math.round((correctCount / currentQuestions.length) * 100));
-    setShowAnswers(true); // Fija el estado para mostrar colores y respuestas
-  };
-
-  const forceAnswers = () => {
-    const correctAnswers = {};
-    currentQuestions.forEach((q) => {
-      correctAnswers[q.id] = q.correctAnswer;
-    });
-    setAnswers(correctAnswers);
-    setScore(100);
-    setShowAnswers(true);
-  };
 
   const calculateDCA = useMemo(() => {
     let totalInvested = 0;
@@ -304,7 +275,8 @@ export const StrategyRiskModule = () => {
 
       {/* -------------------------------------------------------------------------------- */}
       {/* 3. INDICADORES DE TRADING PRIMORDIALES */}
-      {/* ------------------------------------------------------------------      <section className="space-y-6">
+      {/* -------------------------------------------------------------------------------- */}
+      <section className="space-y-6">
         <h3 className="text-2xl font-bold text-white border-b border-gray-800 pb-2">{t('mod3.s3Title')}</h3>
         <div className="grid lg:grid-cols-3 gap-6">
            <Tooltip content={t('mod3.ttRsiTitle')} position="top">
@@ -343,7 +315,6 @@ export const StrategyRiskModule = () => {
              </Card>
            </Tooltip>
         </div>
-      </section>
       </section>
 
       {/* -------------------------------------------------------------------------------- */}
@@ -500,79 +471,11 @@ export const StrategyRiskModule = () => {
       {/* -------------------------------------------------------------------------------- */}
       {/* 5. QUIZ DINÁMICO AVANZADO DE RIESGO MATEMÁTICO */}
       {/* -------------------------------------------------------------------------------- */}
-      <div className="flex items-center gap-4 py-8">
-        <div className="h-px bg-gray-800 flex-1"></div>
-        <span className="text-gray-500 text-sm font-bold uppercase tracking-wider">Evaluación Final de Ecosistema e Inversión</span>
-        <div className="h-px bg-gray-800 flex-1"></div>
-      </div>
-
-      <section>
-        <Card className={`transition-all duration-700 ${score === 100 ? 'border-sol-green shadow-[0_0_30px_rgba(20,241,149,0.15)] bg-sol-green/5' : score !== null ? 'border-red-500 bg-red-500/5' : 'border-gray-800'}`}>
-          <div className="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-8 border-b border-gray-800 pb-4">
-            <h3 className="text-xl font-bold text-white">Prueba Integral Institucional Mod. 3</h3>
-            
-            <div className="flex gap-3 items-center">
-               <Tooltip content="Calcula y demuestra rigor.">
-                 <Button variant="outline" size="sm" onClick={checkAnswers} disabled={Object.keys(answers).length < 5}>
-                   Verificar Examen
-                 </Button>
-               </Tooltip>
-               <Tooltip content="Audita las llaves maestras de esta evaluación.">
-                 <Button variant="ghost" size="sm" onClick={forceAnswers} className="text-gray-400">
-                   <Eye size={18} className="mr-2"/> Revelar Metodología
-                 </Button>
-               </Tooltip>
-            </div>
-          </div>
-
-          <div className="space-y-10">
-            {currentQuestions.map((q, index) => (
-              <div key={q.id} className="space-y-4 bg-gray-900/40 p-6 rounded-2xl border border-gray-800/50">
-                 <h4 className="font-bold text-gray-200 text-lg leading-relaxed">{index + 1}. {q.question}</h4>
-                 <div className="space-y-3 pt-2">
-                   {q.options.map((opt) => (
-                     <div 
-                       key={`${q.id}-${opt.id}`} 
-                       onClick={() => setAnswers({ ...answers, [q.id]: opt.id })}
-                       className={`p-4 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
-                         answers[q.id] === opt.id 
-                           ? (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/20 border-sol-green text-green-300' : 'bg-neon-accent/10 border-neon-accent text-cyan-300') 
-                           : (showAnswers && opt.id === q.correctAnswer ? 'bg-sol-green/10 border-sol-green/50 text-green-400/80 shadow-[0_0_15px_rgba(20,241,149,0.2)]' : 'bg-crypto-surface-alt border-gray-700 hover:border-gray-500 text-gray-300')
-                       }`}
-                     >
-                       <span className="font-bold mr-2 uppercase opacity-60">[{opt.id}]</span> {opt.text}
-                     </div>
-                   ))}
-                 </div>
-              </div>
-            ))}
-          </div>
-
-          <AnimatePresence>
-            {score !== null && (
-               <motion.div initial={{ opacity:0, y:20 }} animate={{ opacity:1, y:0 }} className="mt-8 border-t border-gray-800 pt-6">
-                 {score >= 60 ? (
-                   <div className="flex flex-col md:flex-row items-center gap-6 bg-sol-green/10 border border-sol-green/30 p-6 rounded-xl text-center md:text-left">
-                     <Award className="text-sol-green flex-shrink-0" size={64} />
-                     <div>
-                       <h4 className="text-3xl font-black text-sol-green mb-2">Score: {score}% - {t('mod3.resAppZ')}</h4>
-                       <p className="text-green-200 text-sm leading-relaxed max-w-2xl">{t('mod3.resAppDesc')}</p>
-                     </div>
-                   </div>
-                 ) : (
-                   <div className="flex flex-col md:flex-row items-center gap-6 bg-red-900/20 border border-red-500/30 p-6 rounded-xl text-center md:text-left">
-                     <AlertTriangle className="text-red-500 flex-shrink-0" size={64} />
-                     <div>
-                       <h4 className="text-3xl font-black text-red-500 mb-2">Score: {score}% - {t('mod3.resFailZ')}</h4>
-                       <p className="text-red-200 text-sm leading-relaxed max-w-2xl">{t('mod3.resFailDesc')}</p>
-                     </div>
-                   </div>
-                 )}
-               </motion.div>
-            )}
-          </AnimatePresence>
-        </Card>
-      </section>
+      <InteractiveQuiz 
+        questionBank={module3QuizBank} 
+        title="Prueba Integral de Riesgo e Inversión"
+        icon={Award}
+      />
 
       {/* -------------------------------------------------------------------------------- */}
       {/* 6. PLATAFORMAS RECOMENDADAS (Afiliados / Call to Action Hacking) */}

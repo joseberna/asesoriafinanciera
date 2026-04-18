@@ -1,3 +1,206 @@
+export const module1QuizBank = [
+  {
+    id: 1,
+    question: "¿Qué hito histórico en 1971 transformó el dinero global en 'Fiat'?",
+    options: [
+      { id: 'a', text: "La creación del Banco Central Europeo." },
+      { id: 'b', text: "El fin del acuerdo Bretton Woods y la desconexión del Oro." }, 
+      { id: 'c', text: "La invención del primer cajero automático." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 2,
+    question: "¿Cuál es la característica principal del dinero Fiat?",
+    options: [
+      { id: 'a', text: "Tiene valor intrínseco basado en su material." },
+      { id: 'b', text: "Está respaldado por reservas de plata." },
+      { id: 'c', text: "Su valor depende de la confianza y el decreto gubernamental." }
+    ],
+    correctAnswer: 'c'
+  },
+  {
+    id: 3,
+    question: "La inflación es técnicamente definida como:",
+    options: [
+      { id: 'a', text: "La subida de precios por culpa de los empresarios." },
+      { id: 'b', text: "La expansión de la masa monetaria por encima de la demanda real." },
+      { id: 'c', text: "Un fenómeno natural e inevitable del crecimiento." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 4,
+    question: "¿Qué es el 'Efecto Cantillon'?",
+    options: [
+      { id: 'a', text: "El aumento de la velocidad del dinero en épocas de crisis." },
+      { id: 'b', text: "Quienes reciben el dinero nuevo primero se benefician a costa de los últimos." },
+      { id: 'c', text: "La caída de la bolsa tras un anuncio de la FED." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 5,
+    question: "¿Por qué el 'Dinero Mercancia' (como el Oro) es superior al Fiat?",
+    options: [
+      { id: 'a', text: "Porque brilla más." },
+      { id: 'b', text: "Porque su costo de producción es nulo." },
+      { id: 'c', text: "Porque tiene escasez inelástica y no puede ser diluido por decreto." }
+    ],
+    correctAnswer: 'c'
+  },
+  {
+    id: 6,
+    question: "¿Qué sucede con el ahorro en una economía de patrón Fiat a largo plazo?",
+    options: [
+      { id: 'a', text: "El ahorrador es recompensado por su paciencia." },
+      { id: 'b', text: "Su poder adquisitivo es asaltado sistemáticamente por la inflación." },
+      { id: 'c', text: "El dinero gana valor gracias al interés compuesto bancario." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 7,
+    question: "En la pirámide del sistema financiero tradicional, ¿quién está en la base?",
+    options: [
+      { id: 'a', text: "Los Bancos Centrales." },
+      { id: 'b', text: "Los Gobiernos." },
+      { id: 'c', text: "La población (cuyo tiempo y trabajo sostiene la deuda)." }
+    ],
+    correctAnswer: 'c'
+  },
+  {
+    id: 8,
+    question: "¿Cuál fue la primera forma de 'dinero' que resolvió la falta de coincidencia de deseos?",
+    options: [
+      { id: 'a', text: "Las criptomonedas." },
+      { id: 'b', text: "Las conchas marinas y sal (Dinero mercancía primitivo)." },
+      { id: 'c', text: "Las transferencias bancarias." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 9,
+    question: "¿Qué es la 'Reserva Fraccionaria'?",
+    options: [
+      { id: 'a', text: "El oro que el banco guarda bajo llave." },
+      { id: 'b', text: "La capacidad del banco de prestar dinero que no tiene físicamente en sus bóvedas." },
+      { id: 'c', text: "Una reserva de emergencia del gobierno." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 10,
+    question: "¿Qué significa que Bitcoin sea 'Inmutable'?",
+    options: [
+      { id: 'a', text: "Que su precio nunca cambia." },
+      { id: 'b', text: "Que el registro de transacciones no puede ser alterado ni por bancos ni gobiernos." },
+      { id: 'c', text: "Que nadie puede usarlo sin permiso." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 11,
+    question: "¿Quién ostenta el monopolio de la emisión de dinero hoy?",
+    options: [
+      { id: 'a', text: "Las empresas tecnológicas." },
+      { id: 'b', text: "Los Bancos Centrales." },
+      { id: 'c', text: "La población civil mediante votación." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 12,
+    question: "¿Cuál es el costo marginal de imprimir un billete de $100 dólares?",
+    options: [
+      { id: 'a', text: "$100 dólares reales en oro." },
+      { id: 'b', text: "Casi cero (el costo ínfimo del papel y tinta)." },
+      { id: 'c', text: "Depende de la bolsa de valores." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 13,
+    question: "¿Qué sucede cuando el gobierno imprime dinero para pagar deuda?",
+    options: [
+      { id: 'a', text: "Se diluye el valor de todo el dinero existente en manos de la población." },
+      { id: 'b', text: "La economía se vuelve más rica de repente." },
+      { id: 'c', text: "Los precios bajan por la abundancia de billetes." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 14,
+    question: "¿Qué ventaja tiene el Oro sobre el Fiat como reserva?",
+    options: [
+      { id: 'a', text: "Es más ligero para transportar." },
+      { id: 'b', text: "Su stock total crece muy lentamente debido a la dificultad minera (Dureza)." },
+      { id: 'c', text: "Se puede imprimir en casa bajo supervisión." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 15,
+    question: "¿Qué es el 'Señoreaje'?",
+    options: [
+      { id: 'a', text: "El beneficio que obtiene el emisor de dinero por la diferencia entre costo de producción y valor nominal." },
+      { id: 'b', text: "Un impuesto a los nobles de la edad media." },
+      { id: 'c', text: "El interés de una cuenta de ahorros." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 16,
+    question: "¿Qué fue el Patrón Oro?",
+    options: [
+      { id: 'a', text: "Un sistema donde cada billete era un recibo por oro real depositado en una bóveda." },
+      { id: 'b', text: "Un metal usado para joyería solamente." },
+      { id: 'c', text: "El sistema actual de los bancos mundiales." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 17,
+    question: "¿Por qué el sistema Fiat necesita una inflación 'objetivo' del 2%?",
+    options: [
+      { id: 'a', text: "Para incentivar el gasto forzado y licuar la deuda real del emisor (Estado)." },
+      { id: 'b', text: "Para ayudar a los pobres a ahorrar mejor." },
+      { id: 'c', text: "Porque es un número de la suerte institucional." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 18,
+    question: "¿Qué es la deflación?",
+    options: [
+      { id: 'a', text: "Cuando el dinero gana poder adquisitivo (los precios de bienes y servicios bajan)." },
+      { id: 'b', text: "Cuando los precios suben sin control." },
+      { id: 'c', text: "El cierre definitivo de un banco central." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 19,
+    question: "¿Qué característica de Bitcoin resuelve el problema de la centralización bancaria?",
+    options: [
+      { id: 'a', text: "Su arquitectura Descentralizada y P2P (Persona a Persona)." },
+      { id: 'b', text: "Que es una moneda oficial de la ONU." },
+      { id: 'c', text: "Que tiene una sede física en cada país." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 20,
+    question: "¿Cuál es el límite máximo de suministro de Bitcoin?",
+    options: [
+      { id: 'a', text: "Es infinito, como el dinero fiat." },
+      { id: 'b', text: "21 millones de unidades, inamovibles matemáticamente." },
+      { id: 'c', text: "100 mil millones." }
+    ],
+    correctAnswer: 'b'
+  }
+];
+
 export const module2QuizBank = [
   {
     id: 1,
@@ -11,6 +214,26 @@ export const module2QuizBank = [
   },
   {
     id: 2,
+    question: "¿Qué es exactamente el Bitcoin Halving y por qué ocurre aproximadamente cada 4 años?",
+    options: [
+      { id: 'a', text: "Es un evento de marketing para subir el precio artificialmente mediante anuncios institucionales." },
+      { id: 'b', text: "Es una regla matemática que reduce a la mitad la recompensa de los mineros cada 210,000 bloques, asegurando la escasez absoluta." },
+      { id: 'c', text: "Ocurre cuando el 50% de los nodos de la red deciden quemar sus comisiones para combatir la inflación." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 3,
+    question: "Dentro de los ciclos de mercado de Bitcoin, la fase de 'Acumulación' se caracteriza por:",
+    options: [
+      { id: 'a', text: "Euforia máxima en los medios de comunicación y entrada masiva de inversores inexpertos." },
+      { id: 'b', text: "Precios laterales, desinterés general y compras estratégicas del 'Smart Money' mientras hay miedo." },
+      { id: 'c', text: "Caídas violentas del -80% provocadas por el exceso de oferta tras el halving." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 4,
     question: "Si el estándar de encriptación de una Frase Semilla es BIP39 (12/24 palabras), ¿qué aserción es criptográficamente cierta?",
     options: [
       { id: 'a', text: "Las palabras son contraseñas elegidas por el usuario y deben cumplir parámetros de mayúsculas y números." },
@@ -20,7 +243,47 @@ export const module2QuizBank = [
     correctAnswer: 'b'
   },
   {
-    id: 3,
+    id: 5,
+    question: "¿Cuál es el impacto directo del Halving en la 'Oferta' de Bitcoin?",
+    options: [
+      { id: 'a', text: "Incrementa el número de monedas en circulación para satisfacer la demanda global." },
+      { id: 'b', text: "Genera un choque de oferta (Supply Shock), reduciendo el ritmo de emisión de nuevos Bitcoins al mercado." },
+      { id: 'c', text: "Obliga a los mineros a vender el doble de monedas para mantener sus equipos encendidos." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 6,
+    question: "El fenómeno del 'FOMO' (Fear Of Missing Out) suele ocurrir con mayor intensidad durante qué fase del ciclo:",
+    options: [
+      { id: 'a', text: "Invierno Cripto (Bear Market), cuando los precios están en mínimos históricos." },
+      { id: 'b', text: "Bull Run (Parábola), cuando el precio rompe máximos y el público teme quedarse fuera de las ganancias." },
+      { id: 'c', text: "Fase de Acumulación, donde el precio es bajo y estable." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 7,
+    question: "El concepto de 'Escalera del Valor' o Pisos Ascendentes implica que en cada ciclo:",
+    options: [
+      { id: 'a', text: "El precio de Bitcoin debe duplicar su máximo histórico anterior sin excepción." },
+      { id: 'b', text: "Incluso en los peores mercados bajistas, el precio suele mantenerse por encima del mínimo del ciclo anterior, validando su adopción macro." },
+      { id: 'c', text: "Los bancos centrales compran Bitcoin para respaldar sus nuevas CBDCs digitales." }
+    ],
+    correctAnswer: 'b'
+  },
+  {
+    id: 8,
+    question: "¿Por qué se dice que Bitcoin es desinflacionario por diseño matemático?",
+    options: [
+      { id: 'a', text: "Porque su suministro total está limitado a 21 millones y su tasa de emisión decrece con el tiempo." },
+      { id: 'b', text: "Porque el CEO de Bitcoin decide reducir la inflación según el estado de la economía mundial." },
+      { id: 'c', text: "Porque los usuarios queman el 10% de sus transferencias para mantener el valor del token." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 9,
     question: "El diferencial competitivo institucional de PAXG respecto a tener onzas físicas en una bóveda personal es:",
     options: [
       { id: 'a', text: "Divisibilidad microscópica (18 decimales), liquidación global 24/7 y auditoría programática on-chain." },
@@ -30,172 +293,112 @@ export const module2QuizBank = [
     correctAnswer: 'a'
   },
   {
-    id: 4,
-    question: "La característica definitoria de la 'Soberanía Digital' en la autocustodia implica que:",
-    options: [
-      { id: 'a', text: "El Estado te otorga garantías de devolución en caso de hackeos o pérdidas de tu frase semilla." },
-      { id: 'b', text: "Eres tu propio banco, asumiendo la responsabilidad total y eliminando los vectores de censura institucional sobre tus transacciones." },
-      { id: 'c', text: "Tus activos están diversificados equitativamente entre CBDCs autorizadas y Bitcoin." }
-    ],
-    correctAnswer: 'b'
-  },
-  {
-    id: 5,
-    question: "¿Por qué las Monedas de Banco Central (CBDCs) presentan un riesgo sistémico para las libertades civiles?",
-    options: [
-      { id: 'a', text: "Por su volatilidad intrínseca frente al dólar estadounidense, devaluándose rápidamente." },
-      { id: 'b', text: "Al ser 'dinero programable' controlado por el estado, permiten dictar expirabilidad, restricción de compra por huella de carbono o bloqueo por disidencia." },
-      { id: 'c', text: "No están respaldadas por oro, lo que las hace inherentemente inflacionarias y carentes de liquidez global." }
-    ],
-    correctAnswer: 'b'
-  },
-  {
-    id: 6,
-    question: "Un contrato inteligente (Smart Contract) en finanzas descentralizadas es fundamentalmente:",
-    options: [
-      { id: 'a', text: "Un acuerdo legal firmado digitalmente por dos partes usando infraestructura notarial gubernamental." },
-      { id: 'b', text: "Código inmutable y determinista que ejecuta de manera autónoma las reglas financieras una vez desplegado en la blockchain." },
-      { id: 'c', text: "Un servidor proxy que intercepta transferencias bancarias internacionales reduciendo comisiones SWIFT." }
-    ],
-    correctAnswer: 'b'
-  },
-  {
-    id: 7,
-    question: "Si adquieres PAXG en un exchange pero no lo retiras a tu propia billetera (frase semilla), la condición de tus fondos es:",
-    options: [
-      { id: 'a', text: "Están bajo Custodia Parcial; solo tú y el desarrollador del exchange comparten la semilla." },
-      { id: 'b', text: "Eres dueño criptográfico del oro, ya que posees las llaves privadas del exchange mediante un certificado." },
-      { id: 'c', text: "Tienes una simple promesa de pago (IOU). No posees el token real on-chain; el exchange es el custodio absoluto." }
-    ],
-    correctAnswer: 'c'
-  },
-  {
-    id: 8,
-    question: "El teorema económico de 'Dinero Fuerte' (Hard Money) establece que un buen dinero debe:",
-    options: [
-      { id: 'a', text: "Tener un comité bancario central que expanda la base monetaria en tiempos de crisis." },
-      { id: 'b', text: "Poseer propiedades de inmutabilidad, divisibilidad, fungibilidad y ser estrictamente inelástico frente a picos de demanda institucional." },
-      { id: 'c', text: "Respaldarse siempre en algoritmos de crédito social y paridad 1:1 absoluta con la moneda dominante estatal." }
-    ],
-    correctAnswer: 'b'
-  },
-  {
-    id: 9,
-    question: "En una economía inflacionaria sistémica como el sistema fiduciario actual, ahorrar liquidez pura conduce matemáticamente a:",
-    options: [
-      { id: 'a', text: "Garantizar retornos neutros libres de riesgo, resguardando el poder de compra a perpetuidad." },
-      { id: 'b', text: "Aumentar el multiplicador bancario, lo que eventualmente fortalece tu moneda local a largo plazo." },
-      { id: 'c', text: "Deterioro compuesto del poder adquisitivo, obligando al individuo a asumir la especulación de activos bursátiles para sobrevivir." }
-    ],
-    correctAnswer: 'c'
-  },
-  {
     id: 10,
-    question: "¿Cuál es la premisa de validación bajo reserva ('Proof of Reserves') en protocolos como PAXG o USDC?",
+    question: "Según la psicología de ciclos, el mejor momento estratégico para realizar DCA (Dollar Cost Averaging) es:",
     options: [
-      { id: 'a', text: "Un contrato auditable criptográficamente cotejado contra atestaciones financieras de custodios LBMA o auditores de Grado-A." },
-      { id: 'b', text: "Las bases de datos encriptadas del Banco Central y el Fondo Monetario Internacional que declaran la paridad fiduciaria." },
-      { id: 'c', text: "La liquidez agregada descentralizada a través de pools de agricultura de rendimiento (Yield Farming) sostenidas matemáticamente." }
+      { id: 'a', text: "Durante la Euforia, cuando todos tus conocidos están hablando de comprar Bitcoin." },
+      { id: 'b', text: "Durante el Invierno y la Acumulación, cuando el desinterés es alto y el precio está 'en oferta' respecto al valor macro." },
+      { id: 'c', text: "Solo cuando el RSI está por encima de 90 en todas las temporalidades." }
     ],
-    correctAnswer: 'a'
+    correctAnswer: 'b'
   },
   {
     id: 11,
-    question: "El concepto de 'censura financiera' en Web3 (que intenta resolverse nativamente por redes públicas) significa:",
+    question: "¿Cuál es la característica definitoria de la 'Soberanía Digital' en la autocustodia?",
     options: [
-      { id: 'a', text: "Que los mineros y validadores tienen prohibido transaccionar datos ilícitos u ofensivos legalmente en el ledger." },
-      { id: 'b', text: "La capacidad de intermediarios centralizados de congelar activos o bloquear pagos a voluntad, vector que las cadenas públicas repelen por su consenso criptográfico." },
-      { id: 'c', text: "Que el precio del gas limita artificialmente el uso del sistema para usuarios retail en protocolos descentralizados menores." }
+      { id: 'a', text: "El Estado te otorga garantías de devolución en caso de hackeos de tu frase semilla." },
+      { id: 'b', text: "Eres tu propio banco, asumiendo la responsabilidad total y eliminando los vectores de censura sobre tus fondos." },
+      { id: 'c', text: "Tus activos están custodiados por el creador del software de la billetera." }
     ],
     correctAnswer: 'b'
   },
   {
     id: 12,
-    question: "¿Qué ocurre tecnológicamente si pierdes tu dispositivo físico de acceso pero conservas tu Frase Semilla intacta operando un Standard BIP39?",
+    question: "En el contexto del Halving, ¿qué ocurre cuando se alcanza el bloque número 21,000,000?",
     options: [
-      { id: 'a', text: "Debes llamar al proveedor técnico de la wallet para que apruebe tu reinserción antes de 24 horas." },
-      { id: 'b', text: "Los fondos están perdidos irrevocablemente por la sincronización de dispositivo atada por hardware de seguridad." },
-      { id: 'c', text: "El ledger criptográfico está inalterado; usas cualquier software/hardware compatible del mundo para reconstituir tu llave privada y tu saldo reaparece mágicamente." }
+      { id: 'a', text: "La red de Bitcoin se apaga automáticamente al no haber más incentivos." },
+      { id: 'b', text: "Se deja de emitir nuevo Bitcoin y los mineros pasan a cobrar únicamente comisiones de transacción." },
+      { id: 'c', text: "Se realiza un Hard Fork obligatorio para incrementar el suministro otras 21 millones." }
     ],
-    correctAnswer: 'c'
+    correctAnswer: 'b'
   },
   {
     id: 13,
-    question: "El concepto 'Dinero Programable' es un arma de doble filo. La diferencia entre Smart Contracts (Descentralizado) y CBDC (Centralizado) en este tema es:",
+    question: "¿Por qué las Monedas de Banco Central (CBDCs) presentan un riesgo para las libertades civiles?",
     options: [
-      { id: 'a', text: "Un Smart Contract programa liquidez consentida (ej: DeFi). La CBDC programa el comportamiento humano condicionando en qué/cuándo la sociedad puede gastar." },
-      { id: 'b', text: "Un Smart Contract corre bajo autorización estatal, mientras que las CBDC actúan bajo anonimato de identidad validado en Dark Pools." },
-      { id: 'c', text: "Las CBDC otorgan rendimiento anual compuesto de forma algorítmica, los Smart Contracts congelan su saldo si los mercados caen." }
+      { id: 'a', text: "Por su baja velocidad de transacción comparada con Visa o Mastercard." },
+      { id: 'b', text: "Al ser programables por el estado, pueden aplicar fechas de caducidad al dinero o bloquear compras por disidencia social." },
+      { id: 'c', text: "Porque no permiten el uso de pagos contactless en comercios locales." }
     ],
-    correctAnswer: 'a'
+    correctAnswer: 'b'
   },
   {
     id: 14,
-    question: "¿Cuál es la función tecnológica vital del Estándar ERC-20 mediante el cual operan tokens como PAXG o USDT?",
+    question: "La fase de 'Distribución' en un ciclo de Bitcoin suele preceder a:",
     options: [
-      { id: 'a', text: "Es un acta de regulación financiera firmada ante la SEC estadounidense para poder integrarse digitalmente a cuentas de bolsa." },
-      { id: 'b', text: "Un conjunto estandarizado de firmas de software (Reglas Interface) que asegura que cualquier billetera y casa de cambio entienda, contabilice y transfiera tu ficha de manera universal." },
-      { id: 'c', text: "Un protocolo nativo militar de ciberseguridad cuántica que imposibilita los hackeos hacia las llaves maestras." }
+      { id: 'a', text: "Un nuevo Bull Run explosivo de otros 4 años sin correcciones." },
+      { id: 'b', text: "El inicio del Bear Market (Invierno), donde los grandes capitales ya vendieron y el precio comienza a corregir." },
+      { id: 'c', text: "El Halving, que ocurre justo en el pico máximo de euforia." }
     ],
     correctAnswer: 'b'
   },
   {
     id: 15,
-    question: "¿Por qué motivo fundamental el Banco de Pagos Internacionales (BIS) promueve fehacientemente las CBDCs en reemplazo del efectivo físico (M0)?",
+    question: "Si adquieres Bitcoin en un exchange pero no lo retiras a tu propia billetera fría, tu situación legal es:",
     options: [
-      { id: 'a', text: "Porque el BIS busca enriquecer las finanzas de países tercermundistas sin cobrar regalías tecnológicas." },
-      { id: 'b', text: "Para erradicar la corrupción burocrática mediante un control ciudadano del gasto público expuesto en un ledger público general." },
-      { id: 'c', text: "La transición les otorgaría trazabilidad algorítmica absoluta, control monetario microscópico y la capacidad inherente de penalizar a cualquier disidente a través de bloqueos geográficos." }
-    ],
-    correctAnswer: 'c'
-  },
-  {
-    id: 16,
-    question: "A la devaluación planificada de la moneda fianza estatal generada por impresión y expansión de emisión indiscriminada de deuda (Quantitative Easing), le llamamos técnicamente:",
-    options: [
-      { id: 'a', text: "Corrección Volátil de Mercado Soberano a Tasa Fija." },
-      { id: 'b', text: "La Espiral Inflacionaria o 'El Impuesto Invisible'." },
-      { id: 'c', text: "Deflación Ajustada por Expansión Agrega de Base (DAE)." }
+      { id: 'a', text: "Eres el dueño total, ya que el exchange tiene un seguro de depósito bancario." },
+      { id: 'b', text: "Posees un IOU (Pagaré). El exchange es el custodio real y tú dependes de su solvencia y voluntad de retiro." },
+      { id: 'c', text: "Los fondos están en un contrato inteligente que solo tú puedes liberar." }
     ],
     correctAnswer: 'b'
   },
   {
-    id: 17,
-    question: "La superioridad pragmática demostrable de transferir USD 10 Millones en stablecoins sobre red Ethereum respecto al sistema de telecomunicación bancaria Swift reside en:",
+    id: 16,
+    question: "El término 'Capitulación' en un Bear Market se refiere a:",
     options: [
-      { id: 'a', text: "Garantías de anonimato bancario fiscal respaldadas por la jurisdicción donde se creó el Exchange." },
-      { id: 'b', text: "Liquidación terminal asíncrona transfronteriza, finalizada matemáticamente en 12 segundos, a costo marginal y sin requerir burócratas compensadores T+2 interbancarios." },
-      { id: 'c', text: "Que los dólares digitales ganan intereses automáticamente sin intermediarios directos por parte de la reserva federal descentralizada." }
+      { id: 'a', text: "El momento donde los inversores finales venden por pánico masivo, marcando a menudo el suelo real del mercado." },
+      { id: 'b', text: "La firma de nuevos acuerdos comerciales entre exchanges y bancos tradicionales." },
+      { id: 'c', text: "Cuando el precio de Bitcoin iguala al precio del Oro físico por onza troy." }
+    ],
+    correctAnswer: 'a'
+  },
+  {
+    id: 17,
+    question: "A la devaluación planificada de la moneda fiat generada por la impresión indiscriminada de los bancos centrales le llamamos:",
+    options: [
+      { id: 'a', text: "Inyección de Liquidez Saludable para el Crecimiento." },
+      { id: 'b', text: "Impuesto Invisible o Inflación Sistémica." },
+      { id: 'c', text: "Ajuste por Deflación Tecnológica Agregada." }
     ],
     correctAnswer: 'b'
   },
   {
     id: 18,
-    question: "Un usuario de PAXG descubre mediante el Auditor de Reserva on-chain que su barra física de oro, registrada por la refinería comercial, tiene una 'Pureza' de 0.9999. Esto significa que:",
+    question: "¿Qué ocurre tecnológicamente si pierdes tu Hardware Wallet física pero tienes tu Frase Semilla?",
     options: [
-      { id: 'a', text: "El protocolo descuenta un 0.0001% mensual por impuestos de mantenimiento de hardware satelital." },
-      { id: 'b', text: "El lingote custodiado subyacente cumple grado de inversión institucional LBMA ('London Good Delivery Bar') pesando milésimamente puro, lo cual le confiere prima sobre el oro ornamental civil." },
-      { id: 'c', text: "Es un error de coma flotante de la red de bloques dado que Ethereum no permite procesamiento hexadecimal aritmético mayor a tres decimales." }
+      { id: 'a', text: "Los fondos se pierden porque el chip físico contenía los Bitcoins." },
+      { id: 'b', text: "Simplemente introduces la semilla en un nuevo dispositivo y recuperas el acceso total al ledger blockchain." },
+      { id: 'c', text: "Debes solicitar un rescate al soporte técnico del fabricante del dispositivo." }
     ],
     correctAnswer: 'b'
   },
   {
     id: 19,
-    question: "En la economía Fiduciaria Moderna de la Reserva Fraccionaria instaurada globalmente posterior a Bretton Woods/Muerte Patrón Oro (1971), el ciclo de supervivencia dicta que:",
+    question: "El 'Shock de Oferta' provocado por el Halving tiene éxito sistemático porque:",
     options: [
-      { id: 'a', text: "Las leyes del banco central priorizan subsidiar los tipos de interés de los consumidores mediante bonos perpetuos al mercado interno." },
-      { id: 'b', text: "El dinero es creado masivamente contra una hipoteca/pagaré de las deudas ciudadanas y la única manera impuesta de preservar poder compra es comprar activos inflacionados (Bienes Raíces/S&P500), creando fortísimas barreras de entrada a nuevas generaciones." },
-      { id: 'c', text: "Las divisas se fortalecen matemáticamente al no estar ancladas a minerales pesados inflexibles y limitados." }
+      { id: 'a', text: "La demanda de Bitcoin históricamente ha crecido o se ha mantenido frente a una oferta nueva que se reduce a la mitad." },
+      { id: 'b', text: "Los mineros se ven obligados a no vender sus monedas durante 12 meses por ley criptográfica." },
+      { id: 'c', text: "El algoritmo de Bitcoin obliga a los exchanges a subir el precio un 50% cada 4 años." }
     ],
-    correctAnswer: 'b'
+    correctAnswer: 'a'
   },
   {
     id: 20,
-    question: "¿Cuál es el vector de vulnerabilidad fundamental de las Billeteras Frías o Hardware Wallets (Ledger / Trezor) respecto a la Autocustodia?",
+    question: "La 'Regla de Oro' de la autocustodia en el Ecosistema Digital es:",
     options: [
-      { id: 'a', text: "El almacenamiento de la prueba de los fondos desaparece al transcurrir décadas sin conectar la llave por magnetismo degradativo de los chips integrados (RAM Fallible)." },
-      { id: 'b', text: "Que de ninguna manera son invulnerables a métodos coercitivos contra el usuario ($5-Wrench-Attack) y su seguridad asume al menos un guardado físico resiliente sin rastro de la Semilla Original Mnemotécnica en dispositivos con acceso a internet o servidores en la nube." },
-      { id: 'c', text: "Están limitadas programáticamente a transferir capital solo hacia identidades autorizadas conocidas como Know Your Customer (KYC)." }
+      { id: 'a', text: "Guardar tu frase semilla en un correo electrónico encriptado para mayor seguridad personal." },
+      { id: 'b', text: "Not your Keys, Not your Coins. Si no controlas las llaves privadas, no eres el dueño real de tus activos digitales." },
+      { id: 'c', text: "Diversificar tus semillas en al menos 5 exchanges diferentes para evitar hackeos locales." }
     ],
     correctAnswer: 'b'
   }
